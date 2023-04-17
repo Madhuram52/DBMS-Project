@@ -1,30 +1,100 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Sign Up/Login Page</title>
-  <link rel="stylesheet" href="public/stylesindex.css">
+  <title>Buttons Example</title>
+
+
+
+
+  <style>
+    /* Styles for the body */
+    body {
+      background-color: #fdfdcc;
+      /* Background color of the body */
+    }
+
+    /* Container to center the buttons */
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      /* Set height of container to fill viewport */
+    }
+
+    /* Styles for the buttons */
+    .button {
+      padding: 12px 24px;
+      font-size: 18px;
+      border: none;
+      cursor: pointer;
+      margin: 8px;
+      border-radius: 4px;
+      text-align: center;
+      width: 200px;
+      color: #000;
+      /* Text color */
+      background-color: #ffea8a;
+      /* Button background color */
+      transition: background-color 0.3s ease;
+      /* Transition for hover effect */
+    }
+
+
+    /* Button hover effect */
+    .button:hover {
+      background-color: #ffe066;
+      /* Button background color on hover */
+    }
+
+    /* Button 1 */
+    .find-rentals {
+      background-color: #1e90ff;
+      /* Button 1 background color */
+    }
+
+    /* Button 1 hover effect */
+    .find-rentals:hover {
+      background-color: #4682b4;
+      /* Button 1 background color on hover */
+    }
+
+    /* Button 2 */
+    .rent-your-house {
+      background-color: #ff6347;
+      /* Button 2 background color */
+    }
+
+    /* Button 2 hover effect */
+    .rent-your-house:hover {
+      background-color: #ff7f50;
+      /* Button 2 background color on hover */
+    }
+  </style>
 </head>
+
+
+
+
+
 <body>
   <div class="container">
-    <form id="signup-form" class="form">
-      <h2>Sign Up</h2>
-      <input type="text" id="staff-id" placeholder="Staff ID" />
-      <input type="text" id="name" placeholder="Name" />
-      <input type="text" id="phone" placeholder="Phone" />
-      <input type="password" id="password" placeholder="Password" />
-      <button type="submit">Sign Up</button>
-      <p id="login-link">Already have an account? <a href="#" id="login">Login</a></p>
-    </form>
-
-    <form id="login-form" class="form">
-      <h2>Login</h2>
-      <input type="text" id="login-staff-id" placeholder="Staff ID" />
-      <input type="password" id="login-password" placeholder="Password" />
-      <button type="submit">Login</button>
-      <p id="signup-link">Don't have an account? <a href="#" id="signup">Sign Up</a></p>
-    </form>
+    <button onclick="redirectToUserLogin()" class="button find-rentals">Find Rentals</button>
+    <button onclick="redirectToOwnerLogin()" class="button rent-your-house">Rent Your House</button>
   </div>
 
-  <script src="public/script.js"></script>
+  <script>
+
+    function redirectToUserLogin() {
+      window.location.href = '/login1';
+    }
+
+    function redirectToOwnerLogin() {
+      window.location.href = '/login2';
+    }
+
+  </script>
 </body>
+
 </html>

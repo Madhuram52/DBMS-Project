@@ -4,64 +4,35 @@ const mysql = require('mysql');
 const app = express();
 
 app.use(bodyParser.json());
-app.use(express.static(__dirname));
-
 // Create MySQL connection
 const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '12345678', // Replace with your MySQL password
-    database: 'library' // Replace with your database name
+    database: 'rent_management_system' // Replace with your database name
 });
 
 // Connect to MySQL
 connection.connect(err => {
-    if (err) throw err;
-    console.log('Connected to MySQL');
+    // if (err) throw err;
+    // console.log('Connected to MySQL');
+    // var sql = "INSERT INTO customers (name, address) VALUES ('Company Inc', 'Highway 37')";
+    // con.query(sql, function (err, result) {
+    //     if (err) throw err;
+    //     console.log("1 record inserted");
+    // });
 });
 
-app.get("/",(req,res)=>{
+app.get("/", (req, res) => {
     res.sendFile(__dirname + '/public/index.html');
 })
 
-
-// Add a book
-app.post('/addBook', (req, res) => {
-    const { title, author, genre } = req.body;
-    const query = 'INSERT INTO books (title, author, genre) VALUES (?, ?, ?)';
-    connection.query(query, [title, author, genre], (err, result) => {
-        if (err) {
-            res.status(500).send(err.message);
-        } else {
-            const book = { id: result.insertId, title, author, genre };
-            res.json(book);
-        }
-    });
+app.get('/login1', (req, res) => {
+    res.sendFile(__dirname + '/public/loginUser.html');
 });
 
-// Get all books
-app.get('/getBooks', (req, res) => {
-    const query = 'SELECT * FROM books';
-    connection.query(query, (err, rows) => {
-        if (err) {
-            res.status(500).send(err.message);
-        } else {
-            res.json(rows);
-        }
-    });
-});
-
-// Delete a book
-app.delete('/deleteBook/:id', (req, res) => {
-    const id = req.params.id;
-    const query = 'DELETE FROM books WHERE id = ?';
-    connection.query(query, [id], err => {
-        if (err) {
-            res.status(500).send(err.message);
-        } else {
-            res.sendStatus(200);
-        }
-    });
+app.get('/login2', (req, res) => {
+    res.sendFile(__dirname + '/public/loginOwner.html');
 });
 
 const PORT = 3000;

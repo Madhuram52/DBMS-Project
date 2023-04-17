@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sign Up/Login Page</title>
+
+
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 300px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+        }
+
+        #login-form {
+            display: none;
+        }
+
+        #login-link,
+        #signup-link {
+            text-align: center;
+        }
+
+        #login-link a,
+        #signup-link a {
+            color: #007bff;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <form id="signup-form" class="form">
+            <h2>Sign Up</h2>
+            <input type="text" id="owner-id" placeholder="Owner ID" />
+            <input type="text" id="owner-name" placeholder="Name" />
+            <input type="text" id="phone" placeholder="Phone" />
+            <input type="password" id="owner-password" placeholder="Password" />
+            <button type="submit">Sign Up</button>
+            <p id="login-link">Already have an account? <a href="#" id="login">Login</a></p>
+        </form>
+
+        <form id="login-form" class="form">
+            <h2>Login</h2>
+            <input type="text" id="owner-id" placeholder="Owner ID" />
+            <input type="password" id="owner-password" placeholder="Password" />
+            <button type="submit">Login</button>
+            <p id="signup-link">Don't have an account? <a href="#" id="signup">Sign Up</a></p>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('login-link').addEventListener('click', function () {
+            document.getElementById('signup-form').style.display = 'none';
+            document.getElementById('login-form').style.display = 'block';
+        });
+
+        document.getElementById('signup-link').addEventListener('click', function () {
+            document.getElementById('signup-form').style.display = 'block';
+            document.getElementById('login-form').style.display = 'none';
+        });
+
+        document.getElementById('signup-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Get form values
+            var staffId = document.getElementById('staff-id').value;
+            var name = document.getElementById('name').value;
+            var phone = document.getElementById('phone').value;
+            var password = document.getElementById('password').value;
+
+            // Perform sign up logic here
+            // Example: Send form data to server for validation and storage
+
+            // Reset form
+            document.getElementById('staff-id').value = '';
+            document.getElementById('name').value = '';
+            document.getElementById('phone').value = '';
+            document.getElementById('password').value = '';
+
+            // Show login form
+            document.getElementById('signup-form').style.display = 'none';
+            document.getElementById('login-form').style.display = 'block';
+        });
+
+        document.getElementById('login-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Get form values
+            var staffId = document.getElementById('login-staff-id').value;
+            var password = document.getElementById('login-password').value;
+
+            // Perform login logic here
+            // Example: Send form data to server for validation and authentication
+
+            // Reset form
+            document.getElementById('login-staff-id').value = '';
+            document.getElementById('login-password').value = '';
+
+            // Redirect to dashboard on successful login
+            window.location.href = 'dashboard.html';
+        });
+
+    </script>
+</body>
+
+</html>

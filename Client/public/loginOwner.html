@@ -64,23 +64,23 @@
 
 <body>
     <div class="container">
-        <form id="signup-form" class="form">
+        <form id="signup-form" class="form" method="post" action="/login2">
             <h2>Sign Up</h2>
-            <input type="text" id="owner-id" placeholder="Owner ID" />
-            <input type="text" id="owner-name" placeholder="Name" />
-            <input type="text" id="phone" placeholder="Phone" />
+            <input type="text" name="owenerid" id="owner-id" placeholder="Owner ID" />
+            <input type="text" name="oname" id="owner-name" placeholder="Name" />
+            <input type="text" name="ophone" id="phone" placeholder="Phone" />
             <input type="password" id="owner-password" placeholder="Password" />
             <button type="submit">Sign Up</button>
             <p id="login-link">Already have an account? <a href="#" id="login">Login</a></p>
         </form>
 
-        <form id="login-form" class="form">
+        <!-- <form id="login-form" class="form">
             <h2>Login</h2>
             <input type="text" id="owner-id" placeholder="Owner ID" />
             <input type="password" id="owner-password" placeholder="Password" />
             <button type="submit">Login</button>
             <p id="signup-link">Don't have an account? <a href="#" id="signup">Sign Up</a></p>
-        </form>
+        </form> -->
     </div>
 
     <script>

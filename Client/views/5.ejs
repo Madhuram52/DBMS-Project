@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Number of Bedrooms Page</title>
+  <style>
+    body {
+      background-color: #088395;
+      background-image: url("https://c.housingcdn.com/chimera/s/client/common/assets/raBannerImage.19e37737.png");
+      background-repeat: no-repeat;
+      background-size: 90% 317%;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      background-color: #f8f8f8;
+    }
+
+    /* Header styles */
+    header {
+      opacity: 90%;
+      background-color: #5eadba;
+      border-bottom: 1px solid #ddd;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Button styles */
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      color: #fff;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin: 0 10px;
+    }
+
+    .button:hover {
+      background-color: #3e8e41;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .form-group {
+      margin: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .form-group label {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .form-group input[type="text"] {
+      padding: 8px;
+      font-size: 16px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 5px;
+    }
+
+    .button {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .button2container {
+      position: absolute;
+      top: 300px;
+      left: 15%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .button2 {
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      color: #fff;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin: 0 10px;
+    }
+
+    .button2:hover {
+      background-color: #3e8e41;
+    }
+
+    .button:hover {
+      background-color: #45a049;
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="Price"><button class="button">Price</button></a>
+    <a href="Location"><button class="button">Location</button></a>
+    <a href="bedroom"><button class="button">Number of Bedrooms</button></a>
+    <form action="5" method="post">
+      <div class="button2container">
+        
+        <a href="5"><button class="button2">List the rents available with more than 2 bedrooms and order them by
+            price in descending order.</button></a>
+        
+      </div>
+    </form>
+  </header>
+  <main>
+    <form method="post" action="Bedroom">
+      <div class="form-group">
+        <label for="bedrooms">Number of Bedrooms:</label>
+        <input type="text" id="bedrooms" name="bedrooms">
+      </div>
+      <button class="button" type="submit">Search</button>
+    </form>
+  </main>
+</body>
+
+</html>

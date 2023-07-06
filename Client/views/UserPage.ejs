@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Header View</title>
+    <style>
+        body {
+            background-color: #088395;
+            background-image: url("https://c.housingcdn.com/chimera/s/client/common/assets/raBannerImage.19e37737.png");
+            background-repeat: no-repeat;
+            background-size: 90% 800%;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            background-color: #f8f8f8;
+            position: relative
+        }
+
+        /* Header styles */
+        header {
+            opacity: 90%;
+            background-color: #5eadba;
+            border-bottom: 1px solid #ddd;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Button styles */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 0 10px;
+            margin-bottom: 10px;
+        }
+
+        .button2container {
+            position: absolute;
+            top: 300px;
+            left: 15%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .button2 {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 0 10px;
+        }
+
+        .button2:hover {
+            background-color: #3e8e41;
+        }
+
+        .button:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="Price"><button class="button">Price</button></a>
+        <a href="Location"><button class="button">Location</button></a>
+        <a href="bedroom"><button class="button">Number of Bedrooms</button></a>
+        <div class="button2container">
+            <a href="1"><button class="button2">Average Price of All rooms</button></a>
+      <a href="2"><button class="button2">Which owner has the highest number of available rents and how many
+          rents do they have?</button></a>
+      <a href="3"><button class="button2">List the names of all the owners who have rents available in
+          'adalaj' and 'Maninagar' locations.</button></a>
+      <a href="4"><button class="button2">What is the total number of bedrooms available for rent in
+          'bopal'?</button></a>
+      <a href="5"><button class="button2">List the rents available with more than 2 bedrooms and order them by
+          price in descending order.</button></a>
+      <a href="6"><button class="button2">List the names of all the owners who have rents available with 2 or
+          more bedrooms in 'SBR' and 'Nikol' locations.</button></a>
+      <a href="7"><button class="button2">List the locations with the average rent price for each location,
+          ordered by the average rent price in ascending order.</button></a>
+      <a href="8"><button class="button2">List the rents available with the highest number of bedrooms and the
+          owner's name.</button></a>
+      <a href="9"><button class="button2">What is the total number of rents available in each
+          location?</button></a>
+      <a href="10"><button class="button2">List the names of all the owners who have rents available with a
+          price higher than the average rent price.</button></a>
+        </div>
+    </header>
+</body>
+
+</html>

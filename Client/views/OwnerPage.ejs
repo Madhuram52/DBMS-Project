@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Room Information</title>
+    <style>
+        body {
+            background-image: url("https://i.pinimg.com/564x/88/8a/ba/888aba5492f32c13e98128d45a41bc30.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 15 0%;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+            display: flex;
+        }
+
+        .form-container {
+            background-image: url('https://i.pinimg.com/564x/72/44/07/72440751d6b2bf64959e532ea7768951.jpg');
+            opacity: 95%;
+            background-repeat: no-repeat;
+            background-size: 100% 120%;
+            flex: 1;
+            margin-right: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label,
+        input {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .room-list {
+            flex: 1;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .room-list h2 {
+            margin-top: 0;
+        }
+
+        .room-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .room-details {
+            flex: 1;
+        }
+
+        .delete-button {
+            background-color: #dc3545;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .delete-button:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>Room Information</h1>
+        <form method="post" action="/OwnerPage">
+            <label for="room-id">Room ID:</label>
+            <input type="text" name="rid" id="room-id" name="room-id" required>
+
+            <label for="owner-id">Owner ID:</label>
+            <input type="text" name="owenerid" id="owner-id" name="owner-id" required>
+
+            <label for="price">Price:</label>
+            <input type="text" name="price" id="price" name="price" required>
+
+            <label for="location">Location:</label>
+            <input type="text" name="location" id="location" name="location" required>
+
+            <label for="num-bedrooms">Number of Bedrooms:</label>
+            <input type="text" name="nobed" id="num-bedrooms" name="num-bedrooms" required>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script>
+        // retrieve the owner ID value from the login form
+        var ownerID = sessionStorage.getItem('ownerID');
+
+        // set the value of the owner-id input field in the OwnerPage form
+        document.getElementById('owner-id').value = ownerID;
+    </script>
+
+
+</body>
+
+</html>
